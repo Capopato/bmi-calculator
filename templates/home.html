@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block title%}
+Hallo
+{%endblock%}
+{%block content%}
+    {%with messages = get_flashed_messages()%}
+        {%if messages%}
+            {%for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
+<h2> BMI calculator overview </h2>
+<p1>On this page you can use the calculator to determine your BMI. For more information about BMi see f"{}"</p1>
+
+<p>Name: </p>
+<p><input type="text" name="name"></p>
+<p>Sex (male/female): </p>
+<p><input type="text" name="sex"></p>
+<p>Age: </p>
+<p><input type="text" name="age"></p>
+<p>Height: </p>
+<p><input type="text" name="height"></p>
+<p>Weight: </p>
+<p><input type="text" name="weight"></p>
+<p><input type="submit" value="submit"></p>
+
+{%endblock%}
